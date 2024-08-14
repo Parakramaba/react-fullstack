@@ -1,3 +1,14 @@
 spring:
   application:
       name: career-service
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: UTC
+
+  profiles:
+    active: local
