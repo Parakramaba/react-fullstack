@@ -10,6 +10,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service("JobPostingService")
 public class JobPostingService {
 
@@ -44,6 +46,15 @@ public class JobPostingService {
 
         jobPostingRepository.save(jobPosting);
         return new ResponseEntity<>("Job posting created successfully", HttpStatus.CREATED);
+    }
+
+    /**
+     * Returns all the job postings.
+     * @return Job postings
+     */
+    public ResponseEntity<?> getAll() {
+        List<JobPosting> jobPostings = jobPostingRepository.findAll();
+        return new ResponseEntity<>(jobPostings, HttpStatus.OK);
     }
 
 }

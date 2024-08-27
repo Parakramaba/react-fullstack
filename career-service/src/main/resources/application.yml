@@ -4,7 +4,8 @@ server:
 
 spring:
   application:
-      name: career-service
+    name: career-service
+
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
 
