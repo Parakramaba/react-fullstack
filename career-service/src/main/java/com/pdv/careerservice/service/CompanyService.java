@@ -16,7 +16,12 @@ public class CompanyService {
         this.companyRepository = companyRepository;
     }
 
-    public ResponseEntity<?> createCompany(CompanyDetailsRecord companyDetailsRecord) {
+    /**
+     *
+     * @param companyDetailsRecord
+     * @return
+     */
+    public ResponseEntity<?> create(CompanyDetailsRecord companyDetailsRecord) {
         Company company = Company.builder()
                 .name(companyDetailsRecord.name())
                 .description(companyDetailsRecord.description())

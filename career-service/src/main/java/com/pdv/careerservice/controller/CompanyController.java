@@ -19,7 +19,7 @@ public class CompanyController {
     }
 
     @PostMapping
-    public ResponseEntity<?> createCompany(@RequestBody CompanyDetailsRecord companyDetailsRecord) {
-        return companyService.createCompany(companyDetailsRecord);
+    public ResponseEntity<?> create(@RequestBody CompanyDetailsRecord companyDetailsRecord) {
+        return companyService.create(companyDetailsRecord);
     }
 }

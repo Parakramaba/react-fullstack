@@ -16,8 +16,8 @@ public class JobPostingController {
     }
 
     @PostMapping
-    public ResponseEntity<?> createJobPosting(@RequestBody JobPostingRecord jobPostingRecord) {
-        return jobPostingService.createJobPosting(jobPostingRecord);
+    public ResponseEntity<?> create(@RequestBody JobPostingRecord jobPostingRecord) {
+        return jobPostingService.create(jobPostingRecord);
     }
 
     @GetMapping

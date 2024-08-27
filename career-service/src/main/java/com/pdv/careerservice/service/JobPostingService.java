@@ -30,7 +30,7 @@ public class JobPostingService {
      * @return
      * @throws ResourceNotFoundException
      */
-    public ResponseEntity<?> createJobPosting(JobPostingRecord jobPostingRecord) throws ResourceNotFoundException {
+    public ResponseEntity<?> create(JobPostingRecord jobPostingRecord) throws ResourceNotFoundException {
 
         Company company = companyRepository.findById(jobPostingRecord.companyId())
                 .orElseThrow(() -> new ResourceNotFoundException("There is no such company in our system"));
